@@ -138,7 +138,7 @@ class StockPicking(models.Model):
     def _check_picking_type_operating_unit(self):
         for rec in self:
             warehouse = rec.picking_type_id.warehouse_id
-            if (rec.picking_type_id and rec.operating_unit_id and
+            if (rec.picking_type_id and rec.operating_unit_id and warehouse and
                     warehouse.operating_unit_id != rec.operating_unit_id):
                 raise UserError(
                     _('Configuration error\nThe Operating Unit of the picking '
@@ -162,8 +162,8 @@ class StockMove(models.Model):
     )
 
     @api.multi
-    @api.constrains('location_id.operating_unit_id', 'picking_id',
-                    'location_id', 'location_dest_id.operating_unit_id',
+    @api.constrains('operating_unit_id', 'picking_id',
+                    'location_id', 'operating_unit_dest_id',
                     'location_dest_id')
     def _check_stock_move_operating_unit(self):
         for stock_move in self:
