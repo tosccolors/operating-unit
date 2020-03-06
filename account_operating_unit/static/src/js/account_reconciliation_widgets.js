@@ -100,7 +100,7 @@ odoo.define('account_operating_unit.reconciliation', function (require) {
 
         initializeCreateForm: function(){
             this._super();
-            if (typeof this.operating_unit_id_field !== 'undefined') {
+            if (typeof this.st_line !== 'undefined' && typeof this.operating_unit_id_field !== 'undefined') {
                 this.operating_unit_id_field.set("value", this.st_line['operating_unit_id']);
             }
         }
