@@ -10,5 +10,8 @@
     "data": [
         "wizard/account_reconcile_view.xml",
     ],
+    'qweb': [
+       "static/src/xml/account_reconciliation.xml",
+        ],
     'installable': True,
 }

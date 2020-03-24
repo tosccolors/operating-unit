@@ -16,7 +16,7 @@ class AccountMoveLineReconcileWriteoff(models.TransientModel):
         operating_unit_id = move_lines.mapped('operating_unit_id')
         if len(operating_unit_id) > 1:
             raise UserError(
-                _('Entries must have to same operating units.')
+                _('Entries must have same operating unit.')
             )
         if 'operating_unit_id' in fields:
             res.update({'operating_unit_id': operating_unit_id.id})
