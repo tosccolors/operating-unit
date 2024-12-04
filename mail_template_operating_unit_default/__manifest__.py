@@ -4,12 +4,11 @@
 
 {
     "name": "Mail Template Operating Unit (Default)",
-    "version": "14.0.0.0.0",
+    "version": "14.0.1.0.0",
     "author" : "Deepa Venkatesh (DK), " "Willem Hulsof, The Open Source Company (TOSC)",
     'website': 'https://www.tosc.nl',
     "license": "LGPL-3",
     'description': """
-----
 This module further extends mechanism of 'mail_template_operating_unit', and finds a template to use based on operating unit set
 on that document.
 
