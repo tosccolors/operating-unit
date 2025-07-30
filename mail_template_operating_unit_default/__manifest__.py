@@ -5,10 +5,10 @@
 {
     "name": "Mail Template Operating Unit (Default)",
     "version": "14.0.1.0.0",
-    "author" : "Deepa Venkatesh (DK), " "Willem Hulsof, The Open Source Company (TOSC)",
-    'website': 'https://www.tosc.nl',
+    "author": "Deepa Venkatesh (DK), " "Willem Hulsof, The Open Source Company (TOSC)",
+    "website": "https://github.com/OCA/operating-unit",
     "license": "LGPL-3",
-    'description': """
+    "description": """
 This module further extends mechanism of 'mail_template_operating_unit', and finds a template to use based on operating unit set
 on that document.
 
@@ -25,10 +25,7 @@ In case of multi custom template scenarios, please retain the original name, wit
 
 """,
     "category": "Base",
-    "depends": [
-        "mail_template_operating_unit",
-        "sale", "account"
-    ],
+    "depends": ["mail_template_operating_unit", "sale", "account"],
     "data": [
         "views/mail_compose_views.xml",
         "views/invoice_send_views.xml",
